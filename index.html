@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudflare Pages Test</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f6821f 0%, #faae40 100%);
+            color: #fff;
+            padding: 2rem;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+        h1 { font-size: 2.25rem; margin-bottom: 0.75rem; }
+        p { font-size: 1.05rem; line-height: 1.6; opacity: 0.95; margin-bottom: 1.5rem; }
+        .status {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.25rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .meta {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>It works!</h1>
+        <p>This is a simple test page deployed via Cloudflare Pages.</p>
+        <span class="status">DEPLOYED</span>
+        <div class="meta">
+            <p id="timestamp"></p>
+        </div>
+    </main>
+    <script>
+        document.getElementById('timestamp').textContent =
+            'Loaded at ' + new Date().toLocaleString();
+    </script>
+</body>
+</html>
